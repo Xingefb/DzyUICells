@@ -13,6 +13,8 @@
 		406286561EC2063F00168528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406286541EC2063F00168528 /* Main.storyboard */; };
 		406286581EC2063F00168528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406286571EC2063F00168528 /* Assets.xcassets */; };
 		4062865B1EC2063F00168528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406286591EC2063F00168528 /* LaunchScreen.storyboard */; };
+		406286661EC2077300168528 /* DzyCollectionDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 406286651EC2077300168528 /* DzyCollectionDefaultCell.m */; };
+		406286691EC2078B00168528 /* DzyTableDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 406286681EC2078B00168528 /* DzyTableDefaultCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		406286571EC2063F00168528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4062865A1EC2063F00168528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4062865C1EC2063F00168528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		406286641EC2077300168528 /* DzyCollectionDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DzyCollectionDefaultCell.h; sourceTree = "<group>"; };
+		406286651EC2077300168528 /* DzyCollectionDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DzyCollectionDefaultCell.m; sourceTree = "<group>"; };
+		406286671EC2078B00168528 /* DzyTableDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DzyTableDefaultCell.h; sourceTree = "<group>"; };
+		406286681EC2078B00168528 /* DzyTableDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DzyTableDefaultCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 		4062864A1EC2063F00168528 /* DzyUICells */ = {
 			isa = PBXGroup;
 			children = (
+				406286631EC2072200168528 /* CollectionViewCells */,
+				406286621EC2070E00168528 /* TableViewCells */,
 				4062864E1EC2063F00168528 /* AppDelegate.h */,
 				4062864F1EC2063F00168528 /* AppDelegate.m */,
 				406286511EC2063F00168528 /* ViewController.h */,
@@ -77,6 +85,24 @@
 				4062864C1EC2063F00168528 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		406286621EC2070E00168528 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				406286671EC2078B00168528 /* DzyTableDefaultCell.h */,
+				406286681EC2078B00168528 /* DzyTableDefaultCell.m */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		406286631EC2072200168528 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				406286641EC2077300168528 /* DzyCollectionDefaultCell.h */,
+				406286651EC2077300168528 /* DzyCollectionDefaultCell.m */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +178,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				406286531EC2063F00168528 /* ViewController.m in Sources */,
+				406286661EC2077300168528 /* DzyCollectionDefaultCell.m in Sources */,
 				406286501EC2063F00168528 /* AppDelegate.m in Sources */,
 				4062864D1EC2063F00168528 /* main.m in Sources */,
+				406286691EC2078B00168528 /* DzyTableDefaultCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +342,7 @@
 				406286611EC2063F00168528 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

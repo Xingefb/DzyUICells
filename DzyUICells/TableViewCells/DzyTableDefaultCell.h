@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString *DzyTableDefaultCell_id = @"DzyTableDefaultCell";
+
 @interface DzyTableDefaultCell : UITableViewCell
+
++ (instancetype)cellForTableVIew:(UITableView *)tableView;
 
 @end

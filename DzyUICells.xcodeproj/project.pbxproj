@@ -16,6 +16,7 @@
 		4062865B1EC2063F00168528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406286591EC2063F00168528 /* LaunchScreen.storyboard */; };
 		406286661EC2077300168528 /* DzyCollectionDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 406286651EC2077300168528 /* DzyCollectionDefaultCell.m */; };
 		406286691EC2078B00168528 /* DzyTableDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 406286681EC2078B00168528 /* DzyTableDefaultCell.m */; };
+		409FF17B1EC945620041C6A0 /* DzyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409FF17A1EC945620041C6A0 /* DzyTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		406286651EC2077300168528 /* DzyCollectionDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DzyCollectionDefaultCell.m; sourceTree = "<group>"; };
 		406286671EC2078B00168528 /* DzyTableDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DzyTableDefaultCell.h; sourceTree = "<group>"; };
 		406286681EC2078B00168528 /* DzyTableDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DzyTableDefaultCell.m; sourceTree = "<group>"; };
+		409FF1791EC945620041C6A0 /* DzyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DzyTableViewController.h; sourceTree = "<group>"; };
+		409FF17A1EC945620041C6A0 /* DzyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DzyTableViewController.m; sourceTree = "<group>"; };
 		C62417B073189F319BA5335B /* Pods-DzyUICells.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DzyUICells.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DzyUICells/Pods-DzyUICells.debug.xcconfig"; sourceTree = "<group>"; };
 		D031DC8596BC71C155021194 /* Pods-DzyUICells.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DzyUICells.release.xcconfig"; path = "Pods/Target Support Files/Pods-DzyUICells/Pods-DzyUICells.release.xcconfig"; sourceTree = "<group>"; };
 		DC82A91F8BC37DB032C24BD0 /* Pods_DzyUICells.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DzyUICells.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +88,8 @@
 				4062864F1EC2063F00168528 /* AppDelegate.m */,
 				406286511EC2063F00168528 /* ViewController.h */,
 				406286521EC2063F00168528 /* ViewController.m */,
+				409FF1791EC945620041C6A0 /* DzyTableViewController.h */,
+				409FF17A1EC945620041C6A0 /* DzyTableViewController.m */,
 				406286541EC2063F00168528 /* Main.storyboard */,
 				406286571EC2063F00168528 /* Assets.xcassets */,
 				406286591EC2063F00168528 /* LaunchScreen.storyboard */,
@@ -255,6 +260,7 @@
 				406286531EC2063F00168528 /* ViewController.m in Sources */,
 				406286661EC2077300168528 /* DzyCollectionDefaultCell.m in Sources */,
 				406286501EC2063F00168528 /* AppDelegate.m in Sources */,
+				409FF17B1EC945620041C6A0 /* DzyTableViewController.m in Sources */,
 				4062864D1EC2063F00168528 /* main.m in Sources */,
 				406286691EC2078B00168528 /* DzyTableDefaultCell.m in Sources */,
 			);

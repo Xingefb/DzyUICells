@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "DzyTableViewController.h"
+
 @interface ViewController ()
 <
 UITableViewDelegate,
@@ -20,6 +22,19 @@ UITableViewDataSource
 @end
 
 @implementation ViewController
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    if (indexPath.section) {
+        DzyTableViewController *viewController = [[DzyTableViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }else {
+
+    }
+
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 

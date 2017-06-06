@@ -37,7 +37,7 @@
     
     [_title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_icon.mas_right).offset(10);
-        make.top.equalTo(_icon.mas_top);
+        make.top.equalTo(self.contentView).offset(10);
         make.width.equalTo(@(CurrentWidth - 110));
     }];
     

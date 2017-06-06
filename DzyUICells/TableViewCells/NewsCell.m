@@ -1,27 +1,25 @@
 //
-//  IconNameMessageCell.m
+//  NewsCell.m
 //  DzyUICells
 //
 //  Created by Dzy on 06/06/2017.
 //  Copyright © 2017 Dzy. All rights reserved.
 //
 
-#import "IconNameMessageCell.h"
+#import "NewsCell.h"
 #import <Masonry/Masonry.h>
 #define CurrentWidth [UIScreen mainScreen].bounds.size.width
 
-@interface IconNameMessageCell ()
-
+@interface NewsCell ()
 @property (nonatomic ) UIImageView *icon;
 @property (nonatomic ) UILabel *title;
 @property (nonatomic ) UILabel *message;
-
 @end
 
-@implementation IconNameMessageCell
+@implementation NewsCell
 
 - (void)setModel:(NSDictionary *)model {
-
+    
     _model = model;
     _title.text = model[@"title"];
     _message.text = model[@"message"];
@@ -29,24 +27,25 @@
 }
 
 - (void)makeFrame {
-
+    
     [_icon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView).offset(10);
         make.top.equalTo(self.contentView).offset(10);
-        make.width.height.equalTo(@20);
+        make.width.height.equalTo(@80);
+        make.bottom.equalTo(self.contentView).offset(-10);
     }];
-
+    
     [_title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_icon.mas_right).offset(10);
-        make.centerY.equalTo(_icon);
-        make.right.equalTo(self.contentView.mas_right).offset(-10);
+        make.top.equalTo(_icon.mas_top);
+        make.width.equalTo(@(CurrentWidth - 110));
     }];
     
     [_message mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).offset(10);
-        make.top.equalTo(_icon.mas_bottom).offset(10);
-        make.width.equalTo(@(CurrentWidth - 20));
-        make.bottom.equalTo(self.contentView).offset(-10);
+        make.left.equalTo(_icon.mas_right).offset(10);
+        make.top.equalTo(_title.mas_bottom).offset(5);
+        make.width.equalTo(@(CurrentWidth - 120));
+        make.bottom.equalTo(_icon.mas_bottom);
     }];
     
 }
@@ -56,7 +55,6 @@
     [self.contentView addSubview:self.icon];
     [self.contentView addSubview:self.title];
     [self.contentView addSubview:self.message];
-
     [self makeFrame];
 }
 
@@ -76,6 +74,7 @@
         UILabel *l = [[UILabel alloc] init];
         l.textColor = [UIColor darkTextColor];
         l.font = [UIFont systemFontOfSize:16];
+        l.numberOfLines = 2;
         _title = l;
     }
     return _title;
@@ -102,13 +101,13 @@
 }
 
 + (instancetype)cellForTableVIew:(UITableView *)tableView {
-
-    IconNameMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:IconNameMessageCell_id];
+    
+    NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:NewsCell_id];
     if (!cell) {
-        cell = [[IconNameMessageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:IconNameMessageCell_id];
+        cell = [[NewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NewsCell_id];
     }
     return cell;
-
+    
 }
 
 - (void)awakeFromNib {

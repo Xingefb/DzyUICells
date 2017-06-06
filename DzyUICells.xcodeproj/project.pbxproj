@@ -17,6 +17,7 @@
 		406286661EC2077300168528 /* DzyCollectionDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 406286651EC2077300168528 /* DzyCollectionDefaultCell.m */; };
 		406286691EC2078B00168528 /* DzyTableDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 406286681EC2078B00168528 /* DzyTableDefaultCell.m */; };
 		406486971EE68BCC0016C319 /* IconNameMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 406486961EE68BCC0016C319 /* IconNameMessageCell.m */; };
+		4064869A1EE6910E0016C319 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 406486991EE6910E0016C319 /* NewsCell.m */; };
 		409FF17B1EC945620041C6A0 /* DzyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409FF17A1EC945620041C6A0 /* DzyTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,8 @@
 		406286681EC2078B00168528 /* DzyTableDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DzyTableDefaultCell.m; sourceTree = "<group>"; };
 		406486951EE68BCC0016C319 /* IconNameMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconNameMessageCell.h; sourceTree = "<group>"; };
 		406486961EE68BCC0016C319 /* IconNameMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconNameMessageCell.m; sourceTree = "<group>"; };
+		406486981EE6910E0016C319 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		406486991EE6910E0016C319 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
 		409FF1791EC945620041C6A0 /* DzyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DzyTableViewController.h; sourceTree = "<group>"; };
 		409FF17A1EC945620041C6A0 /* DzyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DzyTableViewController.m; sourceTree = "<group>"; };
 		C62417B073189F319BA5335B /* Pods-DzyUICells.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DzyUICells.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DzyUICells/Pods-DzyUICells.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				406286681EC2078B00168528 /* DzyTableDefaultCell.m */,
 				406486951EE68BCC0016C319 /* IconNameMessageCell.h */,
 				406486961EE68BCC0016C319 /* IconNameMessageCell.m */,
+				406486981EE6910E0016C319 /* NewsCell.h */,
+				406486991EE6910E0016C319 /* NewsCell.m */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			files = (
 				406286531EC2063F00168528 /* ViewController.m in Sources */,
 				406286661EC2077300168528 /* DzyCollectionDefaultCell.m in Sources */,
+				4064869A1EE6910E0016C319 /* NewsCell.m in Sources */,
 				406486971EE68BCC0016C319 /* IconNameMessageCell.m in Sources */,
 				406286501EC2063F00168528 /* AppDelegate.m in Sources */,
 				409FF17B1EC945620041C6A0 /* DzyTableViewController.m in Sources */,

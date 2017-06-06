@@ -12,6 +12,7 @@ static NSString *DzyTableDefaultCell_id = @"DzyTableDefaultCell";
 
 @interface DzyTableDefaultCell : UITableViewCell
 
+@property (nonatomic ) NSDictionary *model;
 + (instancetype)cellForTableVIew:(UITableView *)tableView;
 
 @end

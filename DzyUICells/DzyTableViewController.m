@@ -8,8 +8,12 @@
 
 #import "DzyTableViewController.h"
 
-#import "DzyTableDefaultCell.h"
 #import <UITableView_FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
+
+#import "DzyTableDefaultCell.h"
+#import "IconNameMessageCell.h"
+
+
 
 @interface DzyTableViewController ()
 <
@@ -18,16 +22,27 @@ UITableViewDataSource
 >
 @property (nonatomic ) UITableView *tableView;
 @property (nonatomic ) NSMutableArray *data;
-
+@property (nonatomic ) NSMutableArray *cellIds;
 @end
 
 @implementation DzyTableViewController
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [tableView fd_heightForCellWithIdentifier:DzyTableDefaultCell_id cacheByIndexPath:indexPath configuration:^(DzyTableDefaultCell *cell) {
-        [cell setModel:[_data objectAtIndex:indexPath.row]];
-    }];
+    NSString *idfenter = [_cellIds objectAtIndex:indexPath.row];
+
+    if ([idfenter isEqualToString:@"default"]) {
+        return [tableView fd_heightForCellWithIdentifier:DzyTableDefaultCell_id cacheByIndexPath:indexPath configuration:^(DzyTableDefaultCell *cell) {
+            [cell setModel:[_data objectAtIndex:indexPath.row]];
+        }];
+    }
+    
+    if ([idfenter isEqualToString:@"icon_name_message"]) {
+        return [tableView fd_heightForCellWithIdentifier:IconNameMessageCell_id cacheByIndexPath:indexPath configuration:^(IconNameMessageCell *cell) {
+            [cell setModel:[_data objectAtIndex:indexPath.row]];
+        }];
+    }
+    return 0.001;
 }
 
 #pragma mark - UITableViewDataSource
@@ -39,10 +54,21 @@ UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    DzyTableDefaultCell *cell = [DzyTableDefaultCell cellForTableVIew:tableView];
-    [cell setModel:[_data objectAtIndex:indexPath.row]];
-    return cell;
+    NSString *idfenter = [_cellIds objectAtIndex:indexPath.row];
+    if ([idfenter isEqualToString:@"default"]) {
+        DzyTableDefaultCell *cell = [DzyTableDefaultCell cellForTableVIew:tableView];
+        [cell setModel:[_data objectAtIndex:indexPath.row]];
+        return cell;
+    }
+    
+    if ([idfenter isEqualToString:@"icon_name_message"]) {
+        IconNameMessageCell *cell = [IconNameMessageCell cellForTableVIew:tableView];
+        [cell setModel:[_data objectAtIndex:indexPath.row]];
+        return cell;
+    }
 
+    return nil;
+    
 }
 
 - (void)viewDidLoad {
@@ -50,20 +76,24 @@ UITableViewDataSource
     self.view.backgroundColor = [UIColor whiteColor];
 
     _data = [NSMutableArray arrayWithCapacity:10];
-
+    _cellIds = [NSMutableArray arrayWithCapacity:10];
     [self createUI];
     [self loadData];
     // Do any additional setup after loading the view.
 }
 
-
 - (void)registerCells {
 
+    [_cellIds addObject:@"default"];
+    [_cellIds addObject:@"icon_name_message"];
+
+    
     [_tableView registerClass:[DzyTableDefaultCell class] forCellReuseIdentifier:DzyTableDefaultCell_id];
-    [_data addObject:@{@"title":@"Dive",@"message":@"you can request message "}];
-    [_data addObject:@{@"title":@"Lina",@"message":@"you can request message,you can request message,you can request message,you can request message,you can request message,you can request message,you can request message,you can request message,you can request message, "}];
+    [_tableView registerClass:[IconNameMessageCell class] forCellReuseIdentifier:IconNameMessageCell_id];
+
     
-    
+    [_data addObject:@{@"title":@"Lina",@"message":@"you can request message,the type is always used to news can show only text "}];
+    [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive",@"message":@"you can request message , news and chat list or other show user info cells you can setting defferent message show"}];
     
     
 }
@@ -75,7 +105,6 @@ UITableViewDataSource
         tableView.backgroundColor = [UIColor whiteColor];
         tableView.delegate = self;
         tableView.dataSource = self;
-        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         tableView;
     });
     [self.view addSubview:_tableView];

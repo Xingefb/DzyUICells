@@ -1,15 +1,42 @@
 PODS:
   - Masonry (1.0.2)
+  - PINCache (3.0.1-beta.4):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.4)
+    - PINCache/Core (= 3.0.1-beta.4)
+  - PINCache/Arc-exception-safe (3.0.1-beta.4):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.4):
+    - PINOperation (= 1.0.3)
+  - PINOperation (1.0.3)
+  - PINRemoteImage/Core (3.0.0-beta.9):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.0-beta.9):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.9):
+    - PINCache (= 3.0.1-beta.4)
+    - PINRemoteImage/Core
+  - Texture (2.3):
+    - Texture/PINRemoteImage (= 2.3)
+  - Texture/Core (2.3)
+  - Texture/PINRemoteImage (2.3):
+    - PINRemoteImage/iOS (= 3.0.0-beta.9)
+    - PINRemoteImage/PINCache
+    - Texture/Core
   - UITableView+FDTemplateLayoutCell (1.4)
 
 DEPENDENCIES:
   - Masonry
+  - Texture
   - UITableView+FDTemplateLayoutCell
 
 SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  PINCache: a89c8f609232afac77128557bd12c861844423d7
+  PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
+  PINRemoteImage: e4e02e15a6f96cedbcef2abf1c9c1228dc9897d7
+  Texture: de523401d6c296e63249021246a95bf7f90b3d9c
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
 
-PODFILE CHECKSUM: 8c547b0ea14e33931853e3a1026f5e27525d220f
+PODFILE CHECKSUM: 9809216fa2d6953f528784b1a258e9b3ccd2d4c6
 
 COCOAPODS: 1.2.0

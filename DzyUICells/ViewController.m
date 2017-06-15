@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "DzyTableViewController.h"
+#import <Masonry/Masonry.h>
 
 @interface ViewController ()
 <
@@ -18,6 +19,10 @@ UITableViewDataSource
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic ) NSMutableArray *data;
+
+@property (nonatomic ) ASButtonNode *btn;
+
+@property (nonatomic ) ASNetworkImageNode *imageNode;
 
 @end
 
@@ -64,10 +69,41 @@ UITableViewDataSource
     
 }
 
+- (void)toClickBtn {
+
+    NSLog(@"click btn node");
+
+}
+
+- (ASButtonNode *)btn {
+
+    if (!_btn) {
+        ASButtonNode *btn = [[ASButtonNode alloc] init];
+        [btn setTitle:@"test node button" withFont:[UIFont systemFontOfSize:14] withColor:[UIColor redColor] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(toClickBtn) forControlEvents:ASControlNodeEventTouchUpInside];
+        _btn = btn;
+    }
+    return _btn;
+    
+}
+
+//ASStackLayoutDirection
+
+- (ASNetworkImageNode *)imageNode {
+
+    if (!_imageNode) {
+        
+        ASNetworkImageNode *img = [[ASNetworkImageNode alloc] init];
+        img.URL = [NSURL URLWithString:@""];
+        _imageNode = img;
+        
+    }
+    return _imageNode;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     _data = [NSMutableArray arrayWithCapacity:10];
     
     NSArray *collection_cells = @[@"DzyCollectionDefaultCell"];
@@ -77,6 +113,15 @@ UITableViewDataSource
     [_data addObject:table_cells];
 
     [_tableView reloadData];
+    
+    [self.view addSubnode:self.btn];
+
+    [_btn.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(100);
+        make.centerX.equalTo(self.view);
+        make.width.equalTo(@40);
+        make.height.equalTo(@40);
+    }];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

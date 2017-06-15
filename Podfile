@@ -6,6 +6,7 @@ target 'DzyUICells' do
    use_frameworks!
    inhibit_all_warnings!
 
+pod 'Texture'
 pod 'Masonry'
 pod 'UITableView+FDTemplateLayoutCell'
 

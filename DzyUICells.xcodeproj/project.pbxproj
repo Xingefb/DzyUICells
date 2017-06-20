@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E717B3C027A169CFE4C1658 /* Pods_DzyUICells.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC82A91F8BC37DB032C24BD0 /* Pods_DzyUICells.framework */; };
+		405957B11EF8F7FD0008ED2F /* WeiXinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 405957B01EF8F7FD0008ED2F /* WeiXinCell.m */; };
 		4062864D1EC2063F00168528 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4062864C1EC2063F00168528 /* main.m */; };
 		406286501EC2063F00168528 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4062864F1EC2063F00168528 /* AppDelegate.m */; };
 		406286531EC2063F00168528 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406286521EC2063F00168528 /* ViewController.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		405957AF1EF8F7FD0008ED2F /* WeiXinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiXinCell.h; sourceTree = "<group>"; };
+		405957B01EF8F7FD0008ED2F /* WeiXinCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiXinCell.m; sourceTree = "<group>"; };
 		406286481EC2063F00168528 /* DzyUICells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DzyUICells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4062864C1EC2063F00168528 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4062864E1EC2063F00168528 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				406486991EE6910E0016C319 /* NewsCell.m */,
 				408D32701EF2744500CB45E8 /* HeaderNewsCell.h */,
 				408D32711EF2744500CB45E8 /* HeaderNewsCell.m */,
+				405957AF1EF8F7FD0008ED2F /* WeiXinCell.h */,
+				405957B01EF8F7FD0008ED2F /* WeiXinCell.m */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				4064869A1EE6910E0016C319 /* NewsCell.m in Sources */,
 				406486971EE68BCC0016C319 /* IconNameMessageCell.m in Sources */,
 				406286501EC2063F00168528 /* AppDelegate.m in Sources */,
+				405957B11EF8F7FD0008ED2F /* WeiXinCell.m in Sources */,
 				409FF17B1EC945620041C6A0 /* DzyTableViewController.m in Sources */,
 				4062864D1EC2063F00168528 /* main.m in Sources */,
 				408D32721EF2744500CB45E8 /* HeaderNewsCell.m in Sources */,

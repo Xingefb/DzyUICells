@@ -14,6 +14,7 @@
 #import "IconNameMessageCell.h"
 #import "NewsCell.h"
 #import "HeaderNewsCell.h"
+#import "WeiXinCell.h"
 
 @interface DzyTableViewController ()
 <
@@ -60,6 +61,11 @@ UITableViewDataSource
             [cell setModel:[_data objectAtIndex:indexPath.row]];
         }];
     }
+    if ([idfenter isEqualToString:@"weixin"]) {
+        return [tableView fd_heightForCellWithIdentifier:WeiXinCell_id cacheByIndexPath:indexPath configuration:^(WeiXinCell *cell) {
+            [cell setModel:[_data objectAtIndex:indexPath.row]];
+        }];
+    }
     
     return 0.001;
 }
@@ -98,6 +104,12 @@ UITableViewDataSource
         return cell;
     }
     
+    if ([idfenter isEqualToString:@"weixin"]) {
+        WeiXinCell *cell = [WeiXinCell cellForTableVIew:tableView];
+        [cell setModel:[_data objectAtIndex:indexPath.row]];
+        return cell;
+    }
+    
     return nil;
     
 }
@@ -119,17 +131,20 @@ UITableViewDataSource
     [_cellIds addObject:@"icon_name_message"];
     [_cellIds addObject:@"news"];
     [_cellIds addObject:@"header_news"];
+    [_cellIds addObject:@"weixin"];
+
     
     [_tableView registerClass:[DzyTableDefaultCell class] forCellReuseIdentifier:DzyTableDefaultCell_id];
     [_tableView registerClass:[IconNameMessageCell class] forCellReuseIdentifier:IconNameMessageCell_id];
     [_tableView registerClass:[NewsCell class] forCellReuseIdentifier:NewsCell_id];
     [_tableView registerClass:[HeaderNewsCell class] forCellReuseIdentifier:HeaderNewsCell_id];
+    [_tableView registerClass:[WeiXinCell class] forCellReuseIdentifier:WeiXinCell_id];
 
-    
     [_data addObject:@{@"title":@"Lina",@"message":@"you can request message,the type is always used to news can show only text "}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive",@"message":@"you can request message , news and chat list or other show user info cells you can setting defferent message show"}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive description message and you wirte some code to add the long long message",@"message":@"you can request message , news and chat list or other show user info cells you can setting defferent message show"}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive description message and you wirte some code to add the long long message",@"time":@"2017/01/03",@"state":@"Dream"}];
+    [_data addObject:@{@"name":@"Dave",@"message":@"you can request message,the type is always used to news can show only text "}];
 
     
 }

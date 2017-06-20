@@ -31,10 +31,6 @@
     _title.text = model[@"title"];
     _state.text = model[@"state"];
     _time.text = model[@"time"];
-    [_icon sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497949237550&di=1f5542c10a15b4a3d136fa832a2dd6b3&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3944680232%2C2054173354%26fm%3D214%26gp%3D0.jpg"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        CGSize size = image.size;
-        NSLog(@"width %f height %f",size.width,size.height);
-    }];
     
 }
 

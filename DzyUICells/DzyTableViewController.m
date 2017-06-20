@@ -9,12 +9,15 @@
 #import "DzyTableViewController.h"
 
 #import <UITableView_FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #import "DzyTableDefaultCell.h"
 #import "IconNameMessageCell.h"
 #import "NewsCell.h"
 #import "HeaderNewsCell.h"
 #import "WeiXinCell.h"
+
+
 
 @interface DzyTableViewController ()
 <
@@ -144,9 +147,8 @@ UITableViewDataSource
     [_data addObject:@{@"title":@"Lina",@"message":@"you can request message,the type is always used to news can show only text "}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive",@"message":@"you can request message , news and chat list or other show user info cells you can setting defferent message show"}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive description message and you wirte some code to add the long long message",@"message":@"you can request message , news and chat list or other show user info cells you can setting defferent message show"}];
-    [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive description message and you wirte some code to add the long long message",@"time":@"2017/01/03",@"state":@"Dream"}];
-    [_data addObject:@{@"name":@"Dave",@"message":@"you can request message,the type is always used to news can show only text "}];
-    
+    [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive description message and you wirte some code to add the long long message",@"time":@"2017/01/03",@"state":@"Dream"}];    
+    [_data addObject:@{@"name":@"Dave",@"message":@"you can request message,the type is always used to news can show only text",@"url":@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497954257052&di=e33d51616d4c6c47076e2e6ae76abf1c&imgtype=0&src=http%3A%2F%2Fimg4.cache.netease.com%2Fgame%2F2015%2F6%2F18%2F201506182245552111c.jpg"}];
     
 }
 

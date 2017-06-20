@@ -28,22 +28,16 @@
     
     _name.text = model[@"name"];
     _message.text = model[@"message"];
+
+    [_icon sd_setImageWithURL:[NSURL URLWithString:model[@"url"]] completed:nil];
     
-    // 单张图片自适应 多张图片 需要区分排列
-    [_icon sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497949237550&di=1f5542c10a15b4a3d136fa832a2dd6b3&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3944680232%2C2054173354%26fm%3D214%26gp%3D0.jpg"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        CGSize size = image.size;
-        CGFloat scale = size.width/size.height;
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [_icon mas_updateConstraints:^(MASConstraintMaker *make) {
-                make.height.equalTo(@(CurrentWidth/2));
-                make.width.equalTo(@(CurrentWidth/2*scale));
-                make.left.equalTo(self.contentView).offset(10);
-                make.top.equalTo(_message.mas_bottom).offset(10);
-                make.bottom.equalTo(self.contentView).offset(-10);
-            }];
-        });
-        
+    // let server return size then update icon frame
+    [_icon mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(@(100));
+        make.height.equalTo(@(160));
+        make.left.equalTo(self.contentView).offset(10);
+        make.top.equalTo(_message.mas_bottom).offset(10);
+        make.bottom.equalTo(self.contentView).offset(-10);
     }];
     
 }
@@ -63,7 +57,7 @@
     
     if (!_icon) {
         UIImageView *icon = [[UIImageView alloc] init];
-        icon.backgroundColor = [UIColor orangeColor];
+        icon.contentMode = UIViewContentModeScaleAspectFit;
         _icon = icon;
     }
     return _icon;

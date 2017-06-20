@@ -18,6 +18,7 @@
 		406286691EC2078B00168528 /* DzyTableDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 406286681EC2078B00168528 /* DzyTableDefaultCell.m */; };
 		406486971EE68BCC0016C319 /* IconNameMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 406486961EE68BCC0016C319 /* IconNameMessageCell.m */; };
 		4064869A1EE6910E0016C319 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 406486991EE6910E0016C319 /* NewsCell.m */; };
+		408D32721EF2744500CB45E8 /* HeaderNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 408D32711EF2744500CB45E8 /* HeaderNewsCell.m */; };
 		409FF17B1EC945620041C6A0 /* DzyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409FF17A1EC945620041C6A0 /* DzyTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,8 @@
 		406486961EE68BCC0016C319 /* IconNameMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconNameMessageCell.m; sourceTree = "<group>"; };
 		406486981EE6910E0016C319 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
 		406486991EE6910E0016C319 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		408D32701EF2744500CB45E8 /* HeaderNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderNewsCell.h; sourceTree = "<group>"; };
+		408D32711EF2744500CB45E8 /* HeaderNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderNewsCell.m; sourceTree = "<group>"; };
 		409FF1791EC945620041C6A0 /* DzyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DzyTableViewController.h; sourceTree = "<group>"; };
 		409FF17A1EC945620041C6A0 /* DzyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DzyTableViewController.m; sourceTree = "<group>"; };
 		40AD846B1EF10E4A00CB1054 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				406486961EE68BCC0016C319 /* IconNameMessageCell.m */,
 				406486981EE6910E0016C319 /* NewsCell.h */,
 				406486991EE6910E0016C319 /* NewsCell.m */,
+				408D32701EF2744500CB45E8 /* HeaderNewsCell.h */,
+				408D32711EF2744500CB45E8 /* HeaderNewsCell.m */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -259,7 +264,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -276,6 +281,7 @@
 				406286501EC2063F00168528 /* AppDelegate.m in Sources */,
 				409FF17B1EC945620041C6A0 /* DzyTableViewController.m in Sources */,
 				4062864D1EC2063F00168528 /* main.m in Sources */,
+				408D32721EF2744500CB45E8 /* HeaderNewsCell.m in Sources */,
 				406286691EC2078B00168528 /* DzyTableDefaultCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

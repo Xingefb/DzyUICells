@@ -9,6 +9,7 @@ target 'DzyUICells' do
 pod 'Texture'
 pod 'Masonry'
 pod 'UITableView+FDTemplateLayoutCell'
+pod 'SDWebImage'
 
   # Pods for DzyUICells
 

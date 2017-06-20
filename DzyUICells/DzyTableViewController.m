@@ -13,6 +13,7 @@
 #import "DzyTableDefaultCell.h"
 #import "IconNameMessageCell.h"
 #import "NewsCell.h"
+#import "HeaderNewsCell.h"
 
 @interface DzyTableViewController ()
 <
@@ -54,6 +55,12 @@ UITableViewDataSource
         }];
     }
     
+    if ([idfenter isEqualToString:@"header_news"]) {
+        return [tableView fd_heightForCellWithIdentifier:HeaderNewsCell_id cacheByIndexPath:indexPath configuration:^(HeaderNewsCell *cell) {
+            [cell setModel:[_data objectAtIndex:indexPath.row]];
+        }];
+    }
+    
     return 0.001;
 }
 
@@ -85,6 +92,12 @@ UITableViewDataSource
         return cell;
     }
     
+    if ([idfenter isEqualToString:@"header_news"]) {
+        HeaderNewsCell *cell = [HeaderNewsCell cellForTableVIew:tableView];
+        [cell setModel:[_data objectAtIndex:indexPath.row]];
+        return cell;
+    }
+    
     return nil;
     
 }
@@ -105,15 +118,18 @@ UITableViewDataSource
     [_cellIds addObject:@"default"];
     [_cellIds addObject:@"icon_name_message"];
     [_cellIds addObject:@"news"];
+    [_cellIds addObject:@"header_news"];
     
     [_tableView registerClass:[DzyTableDefaultCell class] forCellReuseIdentifier:DzyTableDefaultCell_id];
     [_tableView registerClass:[IconNameMessageCell class] forCellReuseIdentifier:IconNameMessageCell_id];
     [_tableView registerClass:[NewsCell class] forCellReuseIdentifier:NewsCell_id];
+    [_tableView registerClass:[HeaderNewsCell class] forCellReuseIdentifier:HeaderNewsCell_id];
 
     
     [_data addObject:@{@"title":@"Lina",@"message":@"you can request message,the type is always used to news can show only text "}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive",@"message":@"you can request message , news and chat list or other show user info cells you can setting defferent message show"}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive description message and you wirte some code to add the long long message",@"message":@"you can request message , news and chat list or other show user info cells you can setting defferent message show"}];
+    [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive description message and you wirte some code to add the long long message",@"time":@"2017/01/03",@"state":@"Dream"}];
 
     
 }

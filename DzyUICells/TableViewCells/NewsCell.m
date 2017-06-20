@@ -8,6 +8,7 @@
 
 #import "NewsCell.h"
 #import <Masonry/Masonry.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #define CurrentWidth [UIScreen mainScreen].bounds.size.width
 
 @interface NewsCell ()
@@ -23,6 +24,7 @@
     _model = model;
     _title.text = model[@"title"];
     _message.text = model[@"message"];
+    [_icon sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497952628493&di=9990e60e9f55cc9a6c696684802bd270&imgtype=0&src=http%3A%2F%2Fupload.chinaz.com%2F2015%2F0505%2F1430797029876.png"]];
     
 }
 
@@ -63,6 +65,8 @@
     if (!_icon) {
         UIImageView *icon = [[UIImageView alloc] init];
         icon.backgroundColor = [UIColor orangeColor];
+        icon.clipsToBounds = YES;
+        icon.contentMode = UIViewContentModeScaleAspectFill;
         _icon = icon;
     }
     return _icon;

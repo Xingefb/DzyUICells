@@ -8,6 +8,7 @@
 
 #import "IconNameMessageCell.h"
 #import <Masonry/Masonry.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #define CurrentWidth [UIScreen mainScreen].bounds.size.width
 
 @interface IconNameMessageCell ()
@@ -25,7 +26,7 @@
     _model = model;
     _title.text = model[@"title"];
     _message.text = model[@"message"];
-    
+        [_icon sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497952581139&di=4847d197b688fc4bb7c5907de165bf77&imgtype=0&src=http%3A%2F%2Fimg.kuqin.com%2Fupimg%2Fallimg%2F160328%2F20113MW5-1.png"]];
 }
 
 - (void)makeFrame {
@@ -65,6 +66,8 @@
     if (!_icon) {
         UIImageView *icon = [[UIImageView alloc] init];
         icon.backgroundColor = [UIColor orangeColor];
+        icon.clipsToBounds = YES;
+        icon.contentMode = UIViewContentModeScaleAspectFill;
         _icon = icon;
     }
     return _icon;

@@ -31,6 +31,7 @@
     _title.text = model[@"title"];
     _state.text = model[@"state"];
     _time.text = model[@"time"];
+    [_icon sd_setImageWithURL:[NSURL URLWithString:@"https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1497942505&di=00a67aa474b9737e5f91e7ce3039866c&src=http://images.cnitblog.com/blog/593998/201401/272307320319019.jpg"]];
     
 }
 
@@ -77,6 +78,8 @@
     if (!_icon) {
         UIImageView *icon = [[UIImageView alloc] init];
         icon.backgroundColor = [UIColor orangeColor];
+        icon.clipsToBounds = YES;
+        icon.contentMode = UIViewContentModeScaleAspectFill;
         _icon = icon;
     }
     return _icon;

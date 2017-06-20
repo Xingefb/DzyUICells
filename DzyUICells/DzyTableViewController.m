@@ -140,12 +140,13 @@ UITableViewDataSource
     [_tableView registerClass:[HeaderNewsCell class] forCellReuseIdentifier:HeaderNewsCell_id];
     [_tableView registerClass:[WeiXinCell class] forCellReuseIdentifier:WeiXinCell_id];
 
+    
     [_data addObject:@{@"title":@"Lina",@"message":@"you can request message,the type is always used to news can show only text "}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive",@"message":@"you can request message , news and chat list or other show user info cells you can setting defferent message show"}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive description message and you wirte some code to add the long long message",@"message":@"you can request message , news and chat list or other show user info cells you can setting defferent message show"}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive description message and you wirte some code to add the long long message",@"time":@"2017/01/03",@"state":@"Dream"}];
     [_data addObject:@{@"name":@"Dave",@"message":@"you can request message,the type is always used to news can show only text "}];
-
+    
     
 }
 

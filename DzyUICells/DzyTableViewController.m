@@ -11,13 +11,14 @@
 #import <UITableView_FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
+#import "YYFPSLabel.h"
+
 #import "DzyTableDefaultCell.h"
 #import "IconNameMessageCell.h"
 #import "NewsCell.h"
 #import "HeaderNewsCell.h"
 #import "WeiXinCell.h"
-
-
+#import "QQMessageCell.h"
 
 @interface DzyTableViewController ()
 <
@@ -70,6 +71,12 @@ UITableViewDataSource
         }];
     }
     
+    if ([idfenter isEqualToString:@"qq"]) {
+        return [tableView fd_heightForCellWithIdentifier:QQMessageCell_id cacheByIndexPath:indexPath configuration:^(QQMessageCell *cell) {
+            [cell setModel:[_data objectAtIndex:indexPath.row]];
+        }];
+    }
+    
     return 0.001;
 }
 
@@ -113,6 +120,12 @@ UITableViewDataSource
         return cell;
     }
     
+    if ([idfenter isEqualToString:@"qq"]) {
+        QQMessageCell *cell = [QQMessageCell cellForTableVIew:tableView];
+        [cell setModel:[_data objectAtIndex:indexPath.row]];
+        return cell;
+    }
+    
     return nil;
     
 }
@@ -135,21 +148,22 @@ UITableViewDataSource
     [_cellIds addObject:@"news"];
     [_cellIds addObject:@"header_news"];
     [_cellIds addObject:@"weixin"];
+    [_cellIds addObject:@"qq"];
 
-    
     [_tableView registerClass:[DzyTableDefaultCell class] forCellReuseIdentifier:DzyTableDefaultCell_id];
     [_tableView registerClass:[IconNameMessageCell class] forCellReuseIdentifier:IconNameMessageCell_id];
     [_tableView registerClass:[NewsCell class] forCellReuseIdentifier:NewsCell_id];
     [_tableView registerClass:[HeaderNewsCell class] forCellReuseIdentifier:HeaderNewsCell_id];
     [_tableView registerClass:[WeiXinCell class] forCellReuseIdentifier:WeiXinCell_id];
-
+    [_tableView registerClass:[QQMessageCell class] forCellReuseIdentifier:QQMessageCell_id];
     
     [_data addObject:@{@"title":@"Lina",@"message":@"you can request message,the type is always used to news can show only text "}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive",@"message":@"you can request message , news and chat list or other show user info cells you can setting defferent message show"}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive description message and you wirte some code to add the long long message",@"message":@"you can request message , news and chat list or other show user info cells you can setting defferent message show"}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive description message and you wirte some code to add the long long message",@"time":@"2017/01/03",@"state":@"Dream"}];    
     [_data addObject:@{@"name":@"Dave",@"message":@"you can request message,the type is always used to news can show only text",@"url":@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497954257052&di=e33d51616d4c6c47076e2e6ae76abf1c&imgtype=0&src=http%3A%2F%2Fimg4.cache.netease.com%2Fgame%2F2015%2F6%2F18%2F201506182245552111c.jpg"}];
-    
+    [_data addObject:@{@"icon":@"imageUrl",@"name":@"Feln",@"message":@"Dive description message and you wirte some code to add the long long message",@"time":@"2017/01/03"}];
+
 }
 
 - (void)createUI {
@@ -165,10 +179,13 @@ UITableViewDataSource
     
     [self registerCells];
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [YYFPSLabel xw_addFPSLableOnWidnow];
+    });
+    
 }
 
 - (void)loadData {
-    
     
     [_tableView reloadData];
     

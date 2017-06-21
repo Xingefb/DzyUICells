@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3E717B3C027A169CFE4C1658 /* Pods_DzyUICells.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC82A91F8BC37DB032C24BD0 /* Pods_DzyUICells.framework */; };
 		405957B11EF8F7FD0008ED2F /* WeiXinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 405957B01EF8F7FD0008ED2F /* WeiXinCell.m */; };
+		4060818D1EFA091200424580 /* QQMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4060818C1EFA091200424580 /* QQMessageCell.m */; };
+		406081951EFA133A00424580 /* UIView+XWAddForRoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 406081901EFA133A00424580 /* UIView+XWAddForRoundedCorner.m */; };
+		406081961EFA133A00424580 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 406081921EFA133A00424580 /* YYFPSLabel.m */; };
+		406081971EFA133A00424580 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 406081941EFA133A00424580 /* YYWeakProxy.m */; };
+		4060819A1EFA177A00424580 /* UIImage+ImageRoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 406081991EFA177A00424580 /* UIImage+ImageRoundedCorner.m */; };
 		4062864D1EC2063F00168528 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4062864C1EC2063F00168528 /* main.m */; };
 		406286501EC2063F00168528 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4062864F1EC2063F00168528 /* AppDelegate.m */; };
 		406286531EC2063F00168528 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406286521EC2063F00168528 /* ViewController.m */; };
@@ -26,6 +31,16 @@
 /* Begin PBXFileReference section */
 		405957AF1EF8F7FD0008ED2F /* WeiXinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiXinCell.h; sourceTree = "<group>"; };
 		405957B01EF8F7FD0008ED2F /* WeiXinCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiXinCell.m; sourceTree = "<group>"; };
+		4060818B1EFA091200424580 /* QQMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQMessageCell.h; sourceTree = "<group>"; };
+		4060818C1EFA091200424580 /* QQMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQMessageCell.m; sourceTree = "<group>"; };
+		4060818F1EFA133A00424580 /* UIView+XWAddForRoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XWAddForRoundedCorner.h"; sourceTree = "<group>"; };
+		406081901EFA133A00424580 /* UIView+XWAddForRoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XWAddForRoundedCorner.m"; sourceTree = "<group>"; };
+		406081911EFA133A00424580 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		406081921EFA133A00424580 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		406081931EFA133A00424580 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		406081941EFA133A00424580 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		406081981EFA177A00424580 /* UIImage+ImageRoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageRoundedCorner.h"; sourceTree = "<group>"; };
+		406081991EFA177A00424580 /* UIImage+ImageRoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageRoundedCorner.m"; sourceTree = "<group>"; };
 		406286481EC2063F00168528 /* DzyUICells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DzyUICells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4062864C1EC2063F00168528 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4062864E1EC2063F00168528 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,6 +89,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4060818E1EFA133A00424580 /* XWCornerRadius */ = {
+			isa = PBXGroup;
+			children = (
+				4060818F1EFA133A00424580 /* UIView+XWAddForRoundedCorner.h */,
+				406081901EFA133A00424580 /* UIView+XWAddForRoundedCorner.m */,
+				406081911EFA133A00424580 /* YYFPSLabel.h */,
+				406081921EFA133A00424580 /* YYFPSLabel.m */,
+				406081931EFA133A00424580 /* YYWeakProxy.h */,
+				406081941EFA133A00424580 /* YYWeakProxy.m */,
+				406081981EFA177A00424580 /* UIImage+ImageRoundedCorner.h */,
+				406081991EFA177A00424580 /* UIImage+ImageRoundedCorner.m */,
+			);
+			path = XWCornerRadius;
+			sourceTree = "<group>";
+		};
 		4062863F1EC2063F00168528 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +125,7 @@
 		4062864A1EC2063F00168528 /* DzyUICells */ = {
 			isa = PBXGroup;
 			children = (
+				4060818E1EFA133A00424580 /* XWCornerRadius */,
 				406286631EC2072200168528 /* CollectionViewCells */,
 				406286621EC2070E00168528 /* TableViewCells */,
 				4062864E1EC2063F00168528 /* AppDelegate.h */,
@@ -134,6 +165,8 @@
 				408D32711EF2744500CB45E8 /* HeaderNewsCell.m */,
 				405957AF1EF8F7FD0008ED2F /* WeiXinCell.h */,
 				405957B01EF8F7FD0008ED2F /* WeiXinCell.m */,
+				4060818B1EFA091200424580 /* QQMessageCell.h */,
+				4060818C1EFA091200424580 /* QQMessageCell.m */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -280,12 +313,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				406286531EC2063F00168528 /* ViewController.m in Sources */,
+				4060818D1EFA091200424580 /* QQMessageCell.m in Sources */,
 				406286661EC2077300168528 /* DzyCollectionDefaultCell.m in Sources */,
 				4064869A1EE6910E0016C319 /* NewsCell.m in Sources */,
 				406486971EE68BCC0016C319 /* IconNameMessageCell.m in Sources */,
 				406286501EC2063F00168528 /* AppDelegate.m in Sources */,
+				406081951EFA133A00424580 /* UIView+XWAddForRoundedCorner.m in Sources */,
 				405957B11EF8F7FD0008ED2F /* WeiXinCell.m in Sources */,
+				406081971EFA133A00424580 /* YYWeakProxy.m in Sources */,
+				4060819A1EFA177A00424580 /* UIImage+ImageRoundedCorner.m in Sources */,
 				409FF17B1EC945620041C6A0 /* DzyTableViewController.m in Sources */,
+				406081961EFA133A00424580 /* YYFPSLabel.m in Sources */,
 				4062864D1EC2063F00168528 /* main.m in Sources */,
 				408D32721EF2744500CB45E8 /* HeaderNewsCell.m in Sources */,
 				406286691EC2078B00168528 /* DzyTableDefaultCell.m in Sources */,

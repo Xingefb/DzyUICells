@@ -14,6 +14,5 @@ static NSString *QQMessageCell_id = @"QQMessageCell";
 
 @property (nonatomic ) NSDictionary *model;
 + (instancetype)cellForTableVIew:(UITableView *)tableView;
-
-
+ 
 @end

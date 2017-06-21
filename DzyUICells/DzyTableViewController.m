@@ -143,19 +143,19 @@ UITableViewDataSource
 
 - (void)registerCells {
 
-    [_cellIds addObject:@"default"];
-    [_cellIds addObject:@"icon_name_message"];
-    [_cellIds addObject:@"news"];
-    [_cellIds addObject:@"header_news"];
-    [_cellIds addObject:@"weixin"];
-    [_cellIds addObject:@"qq"];
-
     [_tableView registerClass:[DzyTableDefaultCell class] forCellReuseIdentifier:DzyTableDefaultCell_id];
     [_tableView registerClass:[IconNameMessageCell class] forCellReuseIdentifier:IconNameMessageCell_id];
     [_tableView registerClass:[NewsCell class] forCellReuseIdentifier:NewsCell_id];
     [_tableView registerClass:[HeaderNewsCell class] forCellReuseIdentifier:HeaderNewsCell_id];
     [_tableView registerClass:[WeiXinCell class] forCellReuseIdentifier:WeiXinCell_id];
     [_tableView registerClass:[QQMessageCell class] forCellReuseIdentifier:QQMessageCell_id];
+    
+    [_cellIds addObject:@"default"];
+    [_cellIds addObject:@"icon_name_message"];
+    [_cellIds addObject:@"news"];
+    [_cellIds addObject:@"header_news"];
+    [_cellIds addObject:@"weixin"];
+    [_cellIds addObject:@"qq"];
     
     [_data addObject:@{@"title":@"Lina",@"message":@"you can request message,the type is always used to news can show only text "}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive",@"message":@"you can request message , news and chat list or other show user info cells you can setting defferent message show"}];

@@ -19,6 +19,8 @@
 #import "HeaderNewsCell.h"
 #import "WeiXinCell.h"
 #import "QQMessageCell.h"
+#import "StudentCell.h"
+#import "GoogleShopCell.h"
 
 @interface DzyTableViewController ()
 <
@@ -28,6 +30,7 @@ UITableViewDataSource
 @property (nonatomic ) UITableView *tableView;
 @property (nonatomic ) NSMutableArray *data;
 @property (nonatomic ) NSMutableArray *cellIds;
+
 @end
 
 @implementation DzyTableViewController
@@ -73,6 +76,18 @@ UITableViewDataSource
     
     if ([idfenter isEqualToString:@"qq"]) {
         return [tableView fd_heightForCellWithIdentifier:QQMessageCell_id cacheByIndexPath:indexPath configuration:^(QQMessageCell *cell) {
+            [cell setModel:[_data objectAtIndex:indexPath.row]];
+        }];
+    }
+    
+    if ([idfenter isEqualToString:@"student"]) {
+        return [tableView fd_heightForCellWithIdentifier:StudentCell_id cacheByIndexPath:indexPath configuration:^(StudentCell *cell) {
+            [cell setModel:[_data objectAtIndex:indexPath.row]];
+        }];
+    }
+    
+    if ([idfenter isEqualToString:@"google"]) {
+        return [tableView fd_heightForCellWithIdentifier:GoogleShopCell_id cacheByIndexPath:indexPath configuration:^(GoogleShopCell *cell) {
             [cell setModel:[_data objectAtIndex:indexPath.row]];
         }];
     }
@@ -126,7 +141,24 @@ UITableViewDataSource
         return cell;
     }
     
-    return nil;
+    if ([idfenter isEqualToString:@"student"]) {
+        StudentCell *cell = [StudentCell cellForTableVIew:tableView];
+        [cell setModel:[_data objectAtIndex:indexPath.row]];
+        return cell;
+    }
+    
+    if ([idfenter isEqualToString:@"google"]) {
+        GoogleShopCell *cell = [GoogleShopCell cellForTableVIew:tableView];
+        [cell setModel:[_data objectAtIndex:indexPath.row]];
+        return cell;
+    }
+    
+    static NSString *cell_id = @"cellId";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cell_id];
+    }
+    return cell;
     
 }
 
@@ -149,6 +181,9 @@ UITableViewDataSource
     [_tableView registerClass:[HeaderNewsCell class] forCellReuseIdentifier:HeaderNewsCell_id];
     [_tableView registerClass:[WeiXinCell class] forCellReuseIdentifier:WeiXinCell_id];
     [_tableView registerClass:[QQMessageCell class] forCellReuseIdentifier:QQMessageCell_id];
+    [_tableView registerClass:[StudentCell class] forCellReuseIdentifier:StudentCell_id];
+    [_tableView registerClass:[GoogleShopCell class] forCellReuseIdentifier:GoogleShopCell_id];
+    
     
     [_cellIds addObject:@"default"];
     [_cellIds addObject:@"icon_name_message"];
@@ -156,6 +191,9 @@ UITableViewDataSource
     [_cellIds addObject:@"header_news"];
     [_cellIds addObject:@"weixin"];
     [_cellIds addObject:@"qq"];
+    [_cellIds addObject:@"student"];
+    [_cellIds addObject:@"google"];
+
     
     [_data addObject:@{@"title":@"Lina",@"message":@"you can request message,the type is always used to news can show only text "}];
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive",@"message":@"you can request message , news and chat list or other show user info cells you can setting defferent message show"}];
@@ -163,7 +201,9 @@ UITableViewDataSource
     [_data addObject:@{@"icon":@"imageUrl",@"title":@"Dive description message and you wirte some code to add the long long message",@"time":@"2017/01/03",@"state":@"Dream"}];    
     [_data addObject:@{@"name":@"Dave",@"message":@"you can request message,the type is always used to news can show only text",@"url":@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497954257052&di=e33d51616d4c6c47076e2e6ae76abf1c&imgtype=0&src=http%3A%2F%2Fimg4.cache.netease.com%2Fgame%2F2015%2F6%2F18%2F201506182245552111c.jpg"}];
     [_data addObject:@{@"icon":@"imageUrl",@"name":@"Feln",@"message":@"Dive description message and you wirte some code to add the long long message",@"time":@"2017/01/03"}];
-
+    [_data addObject:@{@"icon":@"imageUrl",@"name":@"AirMi",@"className":@"六年三班",@"email":@"dingz@163.com",@"schoolNum":@"年级: 09",@"classNum":@"班级: 03",@"score":@"分数: 567",@"money":@"103"}];
+    [_data addObject:@{@"icon":@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497954257052&di=e33d51616d4c6c47076e2e6ae76abf1c&imgtype=0&src=http%3A%2F%2Fimg4.cache.netease.com%2Fgame%2F2015%2F6%2F18%2F201506182245552111c.jpg",@"title":@"StudyLiving",@"sub_title":@"All people will choose"}];
+    
 }
 
 - (void)createUI {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E717B3C027A169CFE4C1658 /* Pods_DzyUICells.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC82A91F8BC37DB032C24BD0 /* Pods_DzyUICells.framework */; };
+		404B5C5D1EFBB50B003564AC /* StudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 404B5C5C1EFBB50B003564AC /* StudentCell.m */; };
 		405957B11EF8F7FD0008ED2F /* WeiXinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 405957B01EF8F7FD0008ED2F /* WeiXinCell.m */; };
 		4060818D1EFA091200424580 /* QQMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4060818C1EFA091200424580 /* QQMessageCell.m */; };
 		406081951EFA133A00424580 /* UIView+XWAddForRoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 406081901EFA133A00424580 /* UIView+XWAddForRoundedCorner.m */; };
@@ -26,9 +27,12 @@
 		4064869A1EE6910E0016C319 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 406486991EE6910E0016C319 /* NewsCell.m */; };
 		408D32721EF2744500CB45E8 /* HeaderNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 408D32711EF2744500CB45E8 /* HeaderNewsCell.m */; };
 		409FF17B1EC945620041C6A0 /* DzyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409FF17A1EC945620041C6A0 /* DzyTableViewController.m */; };
+		40BEEBBB1F0F5C9100B25A51 /* GoogleShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BEEBBA1F0F5C9100B25A51 /* GoogleShopCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		404B5C5B1EFBB50B003564AC /* StudentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentCell.h; sourceTree = "<group>"; };
+		404B5C5C1EFBB50B003564AC /* StudentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentCell.m; sourceTree = "<group>"; };
 		405957AF1EF8F7FD0008ED2F /* WeiXinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiXinCell.h; sourceTree = "<group>"; };
 		405957B01EF8F7FD0008ED2F /* WeiXinCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiXinCell.m; sourceTree = "<group>"; };
 		4060818B1EFA091200424580 /* QQMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQMessageCell.h; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		409FF1791EC945620041C6A0 /* DzyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DzyTableViewController.h; sourceTree = "<group>"; };
 		409FF17A1EC945620041C6A0 /* DzyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DzyTableViewController.m; sourceTree = "<group>"; };
 		40AD846B1EF10E4A00CB1054 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		40BEEBB91F0F5C9100B25A51 /* GoogleShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleShopCell.h; sourceTree = "<group>"; };
+		40BEEBBA1F0F5C9100B25A51 /* GoogleShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleShopCell.m; sourceTree = "<group>"; };
 		C62417B073189F319BA5335B /* Pods-DzyUICells.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DzyUICells.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DzyUICells/Pods-DzyUICells.debug.xcconfig"; sourceTree = "<group>"; };
 		D031DC8596BC71C155021194 /* Pods-DzyUICells.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DzyUICells.release.xcconfig"; path = "Pods/Target Support Files/Pods-DzyUICells/Pods-DzyUICells.release.xcconfig"; sourceTree = "<group>"; };
 		DC82A91F8BC37DB032C24BD0 /* Pods_DzyUICells.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DzyUICells.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +173,10 @@
 				405957B01EF8F7FD0008ED2F /* WeiXinCell.m */,
 				4060818B1EFA091200424580 /* QQMessageCell.h */,
 				4060818C1EFA091200424580 /* QQMessageCell.m */,
+				404B5C5B1EFBB50B003564AC /* StudentCell.h */,
+				404B5C5C1EFBB50B003564AC /* StudentCell.m */,
+				40BEEBB91F0F5C9100B25A51 /* GoogleShopCell.h */,
+				40BEEBBA1F0F5C9100B25A51 /* GoogleShopCell.m */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -315,6 +325,7 @@
 				406286531EC2063F00168528 /* ViewController.m in Sources */,
 				4060818D1EFA091200424580 /* QQMessageCell.m in Sources */,
 				406286661EC2077300168528 /* DzyCollectionDefaultCell.m in Sources */,
+				40BEEBBB1F0F5C9100B25A51 /* GoogleShopCell.m in Sources */,
 				4064869A1EE6910E0016C319 /* NewsCell.m in Sources */,
 				406486971EE68BCC0016C319 /* IconNameMessageCell.m in Sources */,
 				406286501EC2063F00168528 /* AppDelegate.m in Sources */,
@@ -327,6 +338,7 @@
 				4062864D1EC2063F00168528 /* main.m in Sources */,
 				408D32721EF2744500CB45E8 /* HeaderNewsCell.m in Sources */,
 				406286691EC2078B00168528 /* DzyTableDefaultCell.m in Sources */,
+				404B5C5D1EFBB50B003564AC /* StudentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
